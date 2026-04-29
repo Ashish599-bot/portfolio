@@ -123,26 +123,31 @@ export default function Home() {
         </div>
       </section>
 
-     <section id="skills" className="bg-black py-100 px-80 md-py-60 md-px-24">
-  <div className="reveal">
-    <p className="text-xs tracking-5 uppercase text-yellow mb-12">What I know</p>
-    <h2 className="font-bebas text-section text-white tracking-wide leading-tight">Skills</h2>
-    <div className="w-40px h-3px bg-yellow mt-20 mb-48"></div>
-  </div>
+      <section id="skills" className="bg-black py-100 px-80 md-py-60 md-px-24">
+          <div className="reveal">
+            <p className="text-xs tracking-5 uppercase text-yellow mb-12">What I know</p>
+            <h2 className="font-bebas text-section text-white tracking-wide leading-tight">Skills</h2>
+            <div className="w-40px h-3px bg-yellow mt-20 mb-48"></div>
+          </div>
 
-  <div className="grid grid-skills gap-24 mt-10">
-    {skills.map(({ label, pct, icon: Icon }) => (
-      <div key={label} className="skill-card bg-dark border-white-05 p-28-24 relative overflow-hidden transition-all hover-card reveal">
-        <Icon size={28} className="text-yellow mb-14" strokeWidth={1.5} />
-        <div className="font-bold text-lg text-white mb-8">{label}</div>
-        <div className="w-full h-3px skill-bar-bg mt-12">
-          <div className="h-full skill-bar-fill" data-w={pct} style={{ width: "0%" }}></div>
-        </div>
-        <div className="text-xs text-yellow mt-6" style={{ textAlign: "right" }}>{pct}%</div>
-      </div>
-    ))}
-  </div>
-</section>
+          <div className="grid grid-skills gap-24 mt-10">
+           {skills.map(({ label, pct, icon: Icon }) => (
+            <div key={label} className="skill-card bg-dark border-white-05 p-28-24 relative overflow-hidden transition-all hover-card reveal">
+           <Icon
+            size={28}
+            color="var(--yellow)"
+            strokeWidth={1.5}
+            style={{ marginBottom: "14px" }}
+           />
+           <div className="font-bold text-lg text-white mb-8">{label}</div>
+            <div className="w-full h-3px skill-bar-bg mt-12">
+              <div className="h-full skill-bar-fill" data-w={pct} style={{ width: "0%" }}></div>
+            </div>
+           <div className="text-xs text-yellow mt-6" style={{ textAlign: "right" }}>{pct}%</div>
+         </div>
+         ))}
+       </div>
+      </section>
 
       <section id="process" className="bg-dark py-100 px-80 md-py-60 md-px-24">
         <div className="reveal">
@@ -219,7 +224,7 @@ export default function Home() {
           © {new Date().getFullYear()} Ashish Rai. All rights reserved.
         </div>
         <div className="flex gap-16 cursor-pointer">
-          <a href="https://linkedin.com/in/Ashish/Rai" className="w-36px h-36px bg-white-05 flex items-center justify-center no-underline text-base text-white-50 transition-bg hover-yellow-bg">
+          <a href="https://www.linkedin.com/in/ashish-rai-776022383/" className="w-36px h-36px bg-white-05 flex items-center justify-center no-underline text-base text-white-50 transition-bg hover-yellow-bg">
             In
           </a>
           <a href="https://twitter.com/AshishR43228723" className="w-36px h-36px bg-white-05 flex items-center justify-center no-underline text-base text-white-50 transition-bg hover-yellow-bg">
